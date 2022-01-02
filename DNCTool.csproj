@@ -57,6 +57,9 @@
     <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -72,7 +75,6 @@
   <ItemGroup>
     <Compile Include="Classes\DNCProcessor.cs" />
     <Compile Include="Classes\HttpServer.cs" />
-    <Compile Include="Classes\SimpleJSONConverter.cs" />
     <Compile Include="Models\ResponseDataModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,6 +92,7 @@
     <None Include="app-data\lib\vuejs-3\server-renderer\package.json" />
     <None Include="App.config" />
     <None Include="app.manifest" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app-data\css\app.css">

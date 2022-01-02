@@ -1,4 +1,5 @@
 ﻿using DNCTool.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,7 +48,7 @@ namespace DNCTool.Classes
 					ViewScoreLink = BASE_URL + links[i]
 				});
 			}
-			var json = SimpleJSONConverter.Serialize(resultObj);
+			var json = JsonConvert.SerializeObject(resultObj);
 			Console.WriteLine(json);
 			return json;
 		}
