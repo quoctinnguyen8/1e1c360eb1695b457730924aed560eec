@@ -106,6 +106,7 @@ namespace DNCTool.Classes
 			}
 			else
 			{
+				byte[] buffer;
 				// Liên kết đặc biệt cho API ở front-end
 				if (requestPath.IndexOf("api/search") >= 0)
 				{
@@ -115,27 +116,23 @@ namespace DNCTool.Classes
 						var data = await DNCProcessor.Process(@params, request.UserAgent);
 
 						response.StatusCode = (int)HttpStatusCode.OK;
-						byte[] buffer = Encoding.UTF8.GetBytes(data);
-						response.ContentLength64 = buffer.Length;
+						buffer = Encoding.UTF8.GetBytes(data);
 						context.Response.Headers.Add("Content-Type", "application/json; charset=utf-8");
-						await outputstream.WriteAsync(buffer, 0, buffer.Length);
 					}
 					catch (Exception ex)
 					{
 						Console.WriteLine(ex.Message);
 						response.StatusCode = (int)HttpStatusCode.BadRequest;
-						byte[] buffer = Encoding.UTF8.GetBytes("");
-						response.ContentLength64 = buffer.Length;
-						await outputstream.WriteAsync(buffer, 0, buffer.Length);
+						buffer = Encoding.UTF8.GetBytes("");
 					}
 				}
 				else
 				{
 					response.StatusCode = (int)HttpStatusCode.NotFound;
-					byte[] buffer = Encoding.UTF8.GetBytes("NOT FOUND!");
-					response.ContentLength64 = buffer.Length;
-					await outputstream.WriteAsync(buffer, 0, buffer.Length);
+					buffer = Encoding.UTF8.GetBytes("NOT FOUND!");
 				}
+				response.ContentLength64 = buffer.Length;
+				await outputstream.WriteAsync(buffer, 0, buffer.Length);
 			}
 
 			// Đóng stream để hoàn thành gửi về client
