@@ -86,7 +86,7 @@ namespace DNCTool.Classes
 
 			var fileType = requestPath.Split('.').Last();
 
-			var fileName = serverPath + "/app-data" + requestPath.Replace('/', '\\');
+			var fileName = serverPath + "/assets" + requestPath.Replace('/', '\\');
 
 			if (File.Exists(fileName))
 			{

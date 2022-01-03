@@ -80,98 +80,98 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app-data\lib\vuejs-3\compiler-sfc\index.mjs" />
-    <None Include="app-data\lib\vuejs-3\compiler-sfc\package.json" />
-    <None Include="app-data\lib\vuejs-3\index.mjs">
+    <None Include="assets\lib\vuejs-3\compiler-sfc\index.mjs" />
+    <None Include="assets\lib\vuejs-3\compiler-sfc\package.json" />
+    <None Include="assets\lib\vuejs-3\index.mjs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="app-data\lib\vuejs-3\LICENSE" />
-    <None Include="app-data\lib\vuejs-3\package.json" />
-    <None Include="app-data\lib\vuejs-3\README.md" />
-    <None Include="app-data\lib\vuejs-3\server-renderer\index.mjs" />
-    <None Include="app-data\lib\vuejs-3\server-renderer\package.json" />
+    <None Include="assets\lib\vuejs-3\LICENSE" />
+    <None Include="assets\lib\vuejs-3\package.json" />
+    <None Include="assets\lib\vuejs-3\README.md" />
+    <None Include="assets\lib\vuejs-3\server-renderer\index.mjs" />
+    <None Include="assets\lib\vuejs-3\server-renderer\package.json" />
     <None Include="App.config" />
     <None Include="app.manifest" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app-data\css\app.css">
+    <Content Include="assets\css\app.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\dnc.png">
+    <Content Include="assets\cfs.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\icon.ico">
+    <Content Include="assets\icon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\index.html">
+    <Content Include="assets\index.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\js\app.js">
+    <Content Include="assets\js\app.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\axios\axios.min.js">
+    <Content Include="assets\lib\axios\axios.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\bootstrap-5\css\bootstrap.min.css">
+    <Content Include="assets\lib\bootstrap-5\css\bootstrap.min.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\bootstrap-5\js\bootstrap.bundle.min.js">
+    <Content Include="assets\lib\bootstrap-5\js\bootstrap.bundle.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\vuejs-3\compiler-sfc\index.js" />
-    <Content Include="app-data\lib\vuejs-3\dist\vue.cjs.js">
+    <Content Include="assets\lib\vuejs-3\compiler-sfc\index.js" />
+    <Content Include="assets\lib\vuejs-3\dist\vue.cjs.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\vuejs-3\dist\vue.cjs.prod.js">
+    <Content Include="assets\lib\vuejs-3\dist\vue.cjs.prod.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\vuejs-3\dist\vue.esm-browser.js">
+    <Content Include="assets\lib\vuejs-3\dist\vue.esm-browser.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\vuejs-3\dist\vue.esm-browser.prod.js">
+    <Content Include="assets\lib\vuejs-3\dist\vue.esm-browser.prod.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\vuejs-3\dist\vue.esm-bundler.js">
+    <Content Include="assets\lib\vuejs-3\dist\vue.esm-bundler.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\vuejs-3\dist\vue.global.js">
+    <Content Include="assets\lib\vuejs-3\dist\vue.global.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\vuejs-3\dist\vue.global.prod.js">
+    <Content Include="assets\lib\vuejs-3\dist\vue.global.prod.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\vuejs-3\dist\vue.runtime.esm-browser.js">
+    <Content Include="assets\lib\vuejs-3\dist\vue.runtime.esm-browser.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\vuejs-3\dist\vue.runtime.esm-browser.prod.js">
+    <Content Include="assets\lib\vuejs-3\dist\vue.runtime.esm-browser.prod.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\vuejs-3\dist\vue.runtime.esm-bundler.js">
+    <Content Include="assets\lib\vuejs-3\dist\vue.runtime.esm-bundler.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\vuejs-3\dist\vue.runtime.global.js">
+    <Content Include="assets\lib\vuejs-3\dist\vue.runtime.global.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\vuejs-3\dist\vue.runtime.global.prod.js">
+    <Content Include="assets\lib\vuejs-3\dist\vue.runtime.global.prod.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\vuejs-3\index.js">
+    <Content Include="assets\lib\vuejs-3\index.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="app-data\lib\vuejs-3\server-renderer\index.js" />
+    <Content Include="assets\lib\vuejs-3\server-renderer\index.js" />
     <Content Include="icon.ico" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <TypeScriptCompile Include="app-data\lib\vuejs-3\compiler-sfc\index.d.ts" />
-    <TypeScriptCompile Include="app-data\lib\vuejs-3\dist\vue.d.ts">
+    <TypeScriptCompile Include="assets\lib\vuejs-3\compiler-sfc\index.d.ts" />
+    <TypeScriptCompile Include="assets\lib\vuejs-3\dist\vue.d.ts">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="app-data\lib\vuejs-3\macros-global.d.ts" />
-    <TypeScriptCompile Include="app-data\lib\vuejs-3\macros.d.ts" />
-    <TypeScriptCompile Include="app-data\lib\vuejs-3\ref-macros.d.ts" />
-    <TypeScriptCompile Include="app-data\lib\vuejs-3\server-renderer\index.d.ts" />
+    <TypeScriptCompile Include="assets\lib\vuejs-3\macros-global.d.ts" />
+    <TypeScriptCompile Include="assets\lib\vuejs-3\macros.d.ts" />
+    <TypeScriptCompile Include="assets\lib\vuejs-3\ref-macros.d.ts" />
+    <TypeScriptCompile Include="assets\lib\vuejs-3\server-renderer\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -181,4 +181,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>; Move all assemblies and related files to lib folder
+ROBOCOPY "$(TargetDir) " "$(TargetDir)lib " /XF *.exe *.config *.manifest /XD lib logs assets data /E /IS /MOVE
+if %25errorlevel%25 leq 4 exit 0 else exit %25errorlevel%25</PostBuildEvent>
+  </PropertyGroup>
 </Project>
