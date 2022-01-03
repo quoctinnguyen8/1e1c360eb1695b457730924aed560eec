@@ -36,6 +36,11 @@
 				<p class="small fst-italic text-center">Phát triển bởi <a href="https://facebook.com/cfsdncstudent" target="_blank">Confessions of DNC Students</a></p>
 			</div>
 		</div>
+		<div class="row justify-content-center" v-if="showLoading">
+			<div class="spinner-border text-secondary" role="status">
+				<span class="visually-hidden">Loading...</span>
+			</div>
+		</div>
 		<div class="row" v-if="listData != null">
 			<div class="col-sm-12">
 				<h2 class="text-center">Kết quả tra cứu</h2>

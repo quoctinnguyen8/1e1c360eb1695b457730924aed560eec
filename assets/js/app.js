@@ -4,7 +4,8 @@ Vue.createApp({
 			mssv: '',
 			maLop: '',
 			listData: null,
-			errMesg: null
+			errMesg: null,
+			showLoading: null
 		}
 	},
 	methods: {
@@ -15,7 +16,7 @@ Vue.createApp({
 			} else {
 				this.errMesg = null;
 			}
-
+			this.showLoading = true;
 			axios.get('/api/search', {
 				params: {
 					MaSinhVien: this.mssv,
@@ -24,6 +25,10 @@ Vue.createApp({
 			})
 			.then(json => {
 				this.listData = json.data;
+				this.showLoading = false;
+			})
+			.catch(err => {
+				this.showLoading = false;
 			});
 		}
 	}
