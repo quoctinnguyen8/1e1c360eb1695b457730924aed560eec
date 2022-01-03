@@ -22,11 +22,11 @@
 						<div v-if="errMesg" class="text-danger my-3">{{ errMesg }}</div>
 						<div class="mb-3">
 							<label for="mssv" class="form-label">Mã sinh viên</label>
-							<input type="text" class="form-control" id="mssv" v-model="mssv" placeholder="Mã sinh viên">
+							<input type="text" class="form-control text-uppercase" id="mssv" v-model="mssv" placeholder="Mã sinh viên">
 						</div>
 						<div class="mb-3">
 							<label for="maLop" class="form-label">Mã lớp</label>
-							<input type="text" class="form-control" id="maLop" v-model="maLop" placeholder="Mã lớp">
+							<input type="text" class="form-control text-uppercase" id="maLop" v-model="maLop" placeholder="Mã lớp">
 						</div>
 						<div class="mb-3 text-center">
 							<button type="button" class="btn btn-success px-4" v-on:click="search()">Tra cứu</button>
@@ -64,6 +64,9 @@
 								<td>{{ item.FullName }}</td>
 								<td class="fit px-4">
 									<a :href="item.ViewScoreLink" class="btn btn-outline-primary btn-sm" target="_blank">Xem điểm</a>
+									<a :href="item.ScheduleLink" class="btn btn-outline-success btn-sm ms-2" target="_blank">Lịch học</a>
+									<a :href="item.PointTrainingLink" class="btn btn-outline-info btn-sm ms-2" target="_blank">Điểm rèn luyện</a>
+									<a :href="item.StudentDebtLink" class="btn btn-outline-secondary btn-sm ms-2" target="_blank">Công nợ</a>
 								</td>
 							</tr>
 						</tbody>

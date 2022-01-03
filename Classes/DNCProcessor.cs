@@ -35,7 +35,10 @@ namespace DNCTool.Classes
 			// Trích xuất dữ liệu cần thiết
 			var ids = GetIds(responseText);
 			var fullNames = GetFullNames(responseText);
-			var links = GetViewScoreLinks(responseText);
+			var scores = GetViewScoreLinks(responseText);
+			var schedules = GetScheduleLinks(responseText);
+			var pointTrainings = GetPointTrainingLinks(responseText);
+			var studentDebt = GetStudentDebtLinks(responseText);
 
 			// Đóng gói vào model để convert thành json
 			var resultObj = new List<ResponseDataModel>();
@@ -45,7 +48,10 @@ namespace DNCTool.Classes
 				{
 					Id = ids[i],
 					FullName = HttpUtility.HtmlDecode(fullNames[i]),
-					ViewScoreLink = BASE_URL + links[i]
+					ViewScoreLink = BASE_URL + scores[i],
+					ScheduleLink = BASE_URL + schedules[i],
+					PointTrainingLink = BASE_URL + pointTrainings[i],
+					StudentDebtLink = BASE_URL + studentDebt[i],
 				});
 			}
 			var json = JsonConvert.SerializeObject(resultObj);
@@ -71,6 +77,27 @@ namespace DNCTool.Classes
 		private static List<string> GetViewScoreLinks(string html)
 		{
 			string regex = @"(?<=href="").+(?="" lang=""tc-xemdiem"")";
+			return GetList(html, regex);
+		}
+
+		// Trích xuất link xem lịch học
+		private static List<string> GetScheduleLinks(string html)
+		{
+			string regex = @"(?<=href="").+(?="" lang=""tc-lichtuan"")";
+			return GetList(html, regex);
+		}
+
+		// Trích xuất link xem điểm rèn luyện
+		private static List<string> GetPointTrainingLinks(string html)
+		{
+			string regex = @"(?<=href="").+(?="" lang=""tc-btnXemrenluyen"")";
+			return GetList(html, regex);
+		}
+
+		// Trích xuất link xem công nợ sinh viên
+		private static List<string> GetStudentDebtLinks(string html)
+		{
+			string regex = @"(?<=href="").+(?="" lang=""tc-congno"")";
 			return GetList(html, regex);
 		}
 

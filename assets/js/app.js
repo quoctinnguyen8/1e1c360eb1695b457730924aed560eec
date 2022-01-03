@@ -25,9 +25,13 @@ Vue.createApp({
 			})
 			.then(json => {
 				this.listData = json.data;
-				this.showLoading = false;
 			})
 			.catch(err => {
+				alert("Đã xảy ra lỗi");
+				console.log(err);
+			})
+			.finally(x => {
+				console.log(x);
 				this.showLoading = false;
 			});
 		}
