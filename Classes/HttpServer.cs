@@ -90,7 +90,16 @@ namespace DNCTool.Classes
 
 			if (File.Exists(fileName))
 			{
-				var fileBytesContent = File.ReadAllBytes(fileName);
+				byte[] fileBytesContent;
+				if (requestPath == "/index.html")
+				{
+					var content = File.ReadAllText(fileName);
+					fileBytesContent = Encoding.UTF8.GetBytes(ValidateIndexPage(content));
+				}
+				else
+				{
+					fileBytesContent = File.ReadAllBytes(fileName);
+				}
 				// Gửi thông tin về cho Client
 				if (dicFileType.ContainsKey(fileType))
 				{
@@ -137,6 +146,16 @@ namespace DNCTool.Classes
 
 			// Đóng stream để hoàn thành gửi về client
 			outputstream.Close();
+		}
+
+		string ValidateIndexPage(string html)
+		{
+			string sign = @"<a href=""https://facebook.com/cfsdncstudent"" target=""_blank"">Confessions of DNC Students</a>";
+			if (html.IndexOf(sign) < 0)
+			{
+				return "<h1>LỖI HỆ THỐNG</h1>";
+			}
+			return html;
 		}
 	}
 }
